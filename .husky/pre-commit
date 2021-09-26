@@ -1,0 +1,18 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Style Checking..."
+npm run test:format || (
+    echo "❌ Prettier check failed..."
+)
+npm run test:lint || (
+    echo "❌ Eslint check failed..."
+)
+echo "Type Checking"
+npm run test:ts || (
+    echo "❌ Type check failed"
+)
+echo "Running Test..."
+npm run test || (
+    echo "❌ Unit test failed"
+)
