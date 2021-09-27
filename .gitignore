@@ -1,4 +1,6 @@
-yarn.lock
 node_modules
-yarn-error.log
+# Keep environment variables out of version control
+.env
+dist
+yarn.lock
 package.lock.json
