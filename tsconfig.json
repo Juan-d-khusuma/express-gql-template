@@ -8,6 +8,7 @@
     "allowJs": true,
     "lib": ["dom", "es6"],
     "baseUrl": "./src",
+    "esModuleInterop": true,
     "paths": {
       "@/*": ["./*"]
     }
